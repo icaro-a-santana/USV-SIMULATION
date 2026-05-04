@@ -1,0 +1,5 @@
+<launch>
+    <node pkg ="cop_sim_pkg" exec="coppelia_com_node" />
+    <node pkg ="cop_sim_pkg" exec="control_node" />
+    <node pkg ="cop_sim_pkg" exec="input_node" />
+</launch>

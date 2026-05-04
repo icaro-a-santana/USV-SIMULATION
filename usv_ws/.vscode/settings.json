@@ -1,0 +1,21 @@
+{
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/home/icaro-adriano/Desktop/IARA-PROTOTYPE/iara_ws/install/iara_sensoring/lib/python3.12/site-packages",
+        "/home/icaro-adriano/Desktop/IARA-PROTOTYPE/iara_ws/install/iara_control_py/lib/python3.12/site-packages",
+        "/home/icaro-adriano/Desktop/IARA-PROTOTYPE/iara_ws/install/iara_actuation/lib/python3.12/site-packages",
+        "/home/icaro-adriano/ros2_ws/install/my_py_pkg/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages",
+        "/home/icaro/Programs/CoppeliaSim/programming/zmqRemoteApi/clients/python",
+        "/home/icaro/Programs/CoppeliaSim/programming/zmqRemoteApi/clients/python"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/icaro-adriano/Desktop/IARA-PROTOTYPE/iara_ws/install/iara_sensoring/lib/python3.12/site-packages",
+        "/home/icaro-adriano/Desktop/IARA-PROTOTYPE/iara_ws/install/iara_control_py/lib/python3.12/site-packages",
+        "/home/icaro-adriano/Desktop/IARA-PROTOTYPE/iara_ws/install/iara_actuation/lib/python3.12/site-packages",
+        "/home/icaro-adriano/ros2_ws/install/my_py_pkg/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages",
+        "/home/icaro/Programs/CoppeliaSim/programming/zmqRemoteApi/clients/python",
+        "/home/icaro/Programs/CoppeliaSim/programming/zmqRemoteApi/clients/python"
+    ]
+}
