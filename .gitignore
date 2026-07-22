@@ -1,1 +1,63 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs / editores
 .vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# ROS / Workspace
+usv_ws/build/
+usv_ws/devel/
+usv_ws/install/
+*.bag
+
+# CoppeliaSim e arquivos binários gerados
+CoppeliaSim/
+
+# Bibliotecas/artefatos binários
+*.so
+*.so.*
+*.a
+*.o
+*.out
+*.exe
+
+# Logs e temporários
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Docker / ambiente
+docker-compose.override.yml
+.env
+*.tar.gz
+
+# Scripts locais / runtimes
+run_usv_sim*.sh
+
+# Outros
+.cache/
+node_modules/
+npm-debug.log*
+.DS_Store
+.vscode/
+build/
+install/
+log/

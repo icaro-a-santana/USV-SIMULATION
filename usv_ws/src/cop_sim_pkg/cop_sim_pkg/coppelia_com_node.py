@@ -5,7 +5,6 @@ from std_msgs.msg import Float64
 from cba_art_intrf.msg import NavDat
 
 class Com(Node):
-    
     def __init__(self, node_name: str = 'node'):
         super().__init__(node_name)
 
@@ -22,8 +21,7 @@ class Com(Node):
         self.t = 0.0
         self.t_increment = 0.1
         self.step_interval = 0.02
-        self.total_force = 3
-        self.f1_command = 0.0
+        self.F_command = 0.0
         self.has_ctrl_msg = False
 
         # Estados anteriores para derivadas numericas de aceleracao
@@ -44,7 +42,7 @@ class Com(Node):
         self.publisher_ = self.create_publisher(NavDat, "act_state", 10)
         
         # Nenhum log de inicializacao para manter apenas os sinais solicitados.
-
+        
     def _get_current_pose(self):
         position = self.sim.getObjectPosition(self.iara, -1)
         orientation = self.sim.getObjectOrientation(self.iara, -1)
@@ -95,8 +93,8 @@ class Com(Node):
         self.prev_vy = vy
         self.prev_vyaw = vyaw
 
-        f1 = 0.0
-        f2 = self.total_force
+        Force = 0.0
+        Torque = 0.0
 
         # Nao aplica forca ate receber o primeiro comando em /ctrl_sgn.
         if not self.has_ctrl_msg:
@@ -111,7 +109,7 @@ class Com(Node):
 
         # Aplica duas forcas no referencial local do barco.
         # F1 vem de ctrl_sgn e F2 = F - F1, com pontos simetricos no eixo x.
-        f1 = max(0.0, min(float(self.f1_command), self.total_force))
+        F = self.F_command
         f2 = self.total_force - f1
 
         point_1 = [0.2, 0.3, 0.0]
@@ -133,7 +131,7 @@ class Com(Node):
 
 
     def callback_control_signal(self, msg: Float64):
-        self.f1_command = float(msg.data)
+        self.F_command = float(msg.data)
         self.has_ctrl_msg = True
 
 def main(args=None): #Rotina Principal
